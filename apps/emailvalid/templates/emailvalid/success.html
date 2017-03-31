@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style>
+		thead, td, th{
+			border: 1px solid black;
+			padding: 10px;
+		}
+		body{
+			text-align: center;
+		}	
+		table{
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+	<title>Success Page</title>
+</head>
+<body>
+	<p>The email address you entered is a valid email address! Thank you!</p>
+	<h1>Email Addresses Entered:</h1>
+	<table>
+	<thead>
+		<th>Email Address</th>	
+		<th>Created</th>	
+	</thead>
+	<tbody>
+	{% for user in users %}
+		<td>{{ user.email }}</td> 
+		<td>{{ user.created_at }}</td>
+	{% endfor %}
+	</tbody>
+	</table>
+</body>
+</html>
+		
